@@ -246,6 +246,8 @@ gaps outer 50
 #set gaps for specific workspaces
 workspace 9 gaps inner 0
 workspace 9 gaps outer 0
+workspace 11 gaps outer 0
+workspace 11 gaps inner 0
 
 workspace 1 gaps inner 25
 workspace 1 gaps outer 25
