@@ -1,5 +1,6 @@
 #autoexec
 exec pulseaudio -D
+exec gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
@@ -19,7 +20,7 @@ set $term foot
 set $menu wofi --show
 
 ### Wallpaper
-output * bg ~/wallpaper/h.jpg fill
+output * bg ~/wallpaper/full_moon_and_clouds.jpg fill
 
 # Outputs for monitor setup
 output DP-1 resolution 3840x2160 position 0 0 scale 1.5
@@ -264,3 +265,10 @@ smart_gaps on
 
 ##make the outline of the focused window white
 client.focused #FFFFFF #FFFFFF #FFFFFF
+
+#set clear variable
+set $clear #ffffff00
+
+#set unfocued and focused_inactive windows to be clear border
+client.focused_inactive #FFFFFF #FFFFFF #FFFFFF #FFFFFF $clear
+client.unfocused #FFFFFF #FFFFFF #FFFFFF #FFFFFF $clear
