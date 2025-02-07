@@ -13,14 +13,14 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 
 
 # Your preferred application launcher
 set $menu wofi --show
 
 ### Wallpaper
-output * bg ~/wallpaper/full_moon_and_clouds.jpg fill
+output * bg ~/wallpaper/misty_forest.jpeg fill
 
 # Outputs for monitor setup
 output DP-1 resolution 3840x2160 position 0 0 scale 1.5
@@ -227,16 +227,16 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
     status_command while date +'[ %m.%d.%Y | %X ]'; do sleep 1; done
 
     colors {
-        statusline #00ff00
-        background #00000070
+        statusline #50FA7B
+        background #282A36
 #        inactive_workspace #32323200 #32323200 #5c5c5c
-	focused_workspace #000000f0 #00ff00ff #000000
-	active_workspace #00ff00ff #00ff0000 #00ff00
-	inactive_workspace #ffffff00 #00ff0000 #00ff00
+	focused_workspace #282A36 #282A36 #282A36
+	active_workspace #282A36 #282A36 #282A36
+	inactive_workspace #282A36 #282A36 #282A36
     }
 }
 
@@ -264,7 +264,7 @@ include /etc/sway/config.d/*
 smart_gaps on
 
 ##make the outline of the focused window white
-client.focused #FFFFFF #FFFFFF #FFFFFF
+client.focused #F8F8F2 #F8F8F2 #F8F8F2
 
 #set clear variable
 set $clear #ffffff00
