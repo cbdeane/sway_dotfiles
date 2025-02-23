@@ -20,8 +20,10 @@ set $term alacritty
 
 
 # Your preferred application launcher
-set $menu wofi --show
-
+#set $menu wofi --show
+set $rofi_cmd rofi \
+        -terminal '$term'
+set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 ### Wallpaper
 output * bg ~/wallpaper/misty_forest.jpeg fill
 
@@ -225,23 +227,23 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-    status_command while date +'[ %m.%d.%Y | %X ]'; do sleep 1; done
-
-    colors {
-        statusline #50FA7B
-        background #282A36
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-	focused_workspace #282A36 #282A36 #282A36
-	active_workspace #282A36 #282A36 #282A36
-	inactive_workspace #282A36 #282A36 #282A36
-    }
-}
+#bar {
+#    position bottom
+#
+#    # When the status_command prints a new line to stdout, swaybar updates.
+#    # The default just shows the current date and time.
+#    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+#    status_command while date +'[ %m.%d.%Y | %X ]'; do sleep 1; done
+#
+#    colors {
+#        statusline #50FA7B
+#        background #282A36
+##        inactive_workspace #32323200 #32323200 #5c5c5c
+#	focused_workspace #282A36 #282A36 #282A36
+#	active_workspace #282A36 #282A36 #282A36
+#	inactive_workspace #282A36 #282A36 #282A36
+#    }
+#}
 
 #global gaps values
 gaps inner 50
@@ -257,7 +259,7 @@ workspace 1 gaps inner 25
 workspace 1 gaps outer 25
 
 #remove titlebars
-# default_border none
+#default_border none
 for_window [title="^.*"] title_format ""
 default_border pixel 1
 default_floating_border pixel 1
